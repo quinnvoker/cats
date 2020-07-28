@@ -9,4 +9,9 @@ describe('#breedDetails', () => {
     const bombay = breedDetails('Bombay');
     assert.equal(expectedDesc, bombay);
   });
+
+  it('returns undefined if given a cat breed not in its data', () => {
+    const bengal = breedDetails('Bengal');
+    assert.isUndefined(breedDetails(bengal));
+  });
 });
